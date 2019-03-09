@@ -10,11 +10,19 @@ body{
 }
 
 .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 60px;
     overflow: hidden;
     background-color: #ffffff;
     box-shadow: 0 1px 4px #0000001A;
-    padding: 0 200px 0 200px;
+    padding: 0 0 0 0;
+}
+
+.header-span{
+    max-width: 500px;
 }
 
 .header a {
@@ -30,4 +38,75 @@ body{
 .header-left {
     float: left;
     padding: 15px;
+}
+
+.nav{
+    background: #b9eff2;
+    height: 160px;
+    margin-top: 60px;
+}
+
+.aside{
+    position: absolute;
+    top: 0;
+}
+
+.section{
+    position: relative;
+    background: #f6f6f6;
+    height: 1000px;
+}
+
+.section-image{
+    position: absolute;
+    right: 150px;
+    top: -100px;
+    border-radius: 20px;
+    border: 10px solid #ffffffcc;
+    box-shadow: 0 0 20px #00000020;
+}
+
+.section-name{
+    position: absolute;
+    right: 400px;
+    top: 25px;
+    color: #464646;
+}
+
+.section-job-title{
+    position: absolute;
+    right: 400px;
+    top: 85px;
+    font-size: larger;
+    color: #666666;
+}
+
+.section-bio{
+    position: absolute;
+    right: 150px;
+    left: 150px;
+    top: 140px;
+    text-align: justify;
+    font-size: larger;
+    color: #464646;
+}
+
+.footer {
+    position: static;
+    display: flex;
+    height: 65px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #363636;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer p{
+    text-align: center;
+    color: #878787;
+    text-shadow: 0 2px 4px #000000;
+    margin: 0;
 }

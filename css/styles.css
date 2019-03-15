@@ -75,8 +75,6 @@ body{
     fill: #6bc9ce80;
 }
 
-
-
 .aside{
     position: absolute;
     top: 0;
@@ -168,14 +166,14 @@ body{
 
 .section-skills{
     display: flex;
+    position: relative;
     flex-flow: row;
     top: -100px;
     padding: 0px 150px;
-    position: relative;
     float: left;
 }
 
-.section-skills li{
+.skill-block{
     float: left;
     color: #464646;
     align-content: center;
@@ -191,7 +189,7 @@ body{
     direction: ltr;
 }
 
-.section-skills ul{
+.skills-list{
     display: flow;
     list-style-type: none;
     margin: 0;
@@ -199,7 +197,7 @@ body{
     overflow: hidden;
 }
 
-.section-skills .point{
+.skill-point{
     position: relative;
     padding: 0 8px;
     margin: 10px 0;
@@ -211,17 +209,17 @@ body{
     height: 20px;
 }
 
-.section-skills .pg{
+.pg{
     background: #00b800;
     color: #ffffff;
 }
 
-.section-skills .pb{
+.pb{
     background: #b9eff2;
     color: #006264;
 }
 
-.section-skills .pr{
+.pr{
      background: #ef001c;
      color: #ffffff;
  }
@@ -229,22 +227,95 @@ body{
 .main{
     position: relative;
     background: #ffffff;
-    height: 900px;
     top: -50px;
     margin: 0 160px;
     border-radius: 8px;
     box-shadow: 0 2px 8px #0000001A;
 }
 
-.main-img{
+.main-top-right{
+    display: inline-table;
+    padding: 30px 30px 30px 30px;
+    vertical-align: top;
+}
+
+.prj-img{
+    border: 1px solid #f3f3f3;
+}
+
+.main-top-left{
+    display: inline-table;
+    padding: 30px 30px 30px 30px;
+    vertical-align: top;
+    width: 70%;
+}
+
+.prj-name{
+    margin: 0 0 30px 0;
+    font-weight: bold;
+}
+
+.aw-icon{
+    display: inline;
+    font-size: 15px;
+    text-space: 20px;
+    width: 25px;
+    text-align: center;
+}
+
+.aw-text{
+    display: inline;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.aw-red{
+    color: #ef001c;
+}
+
+.aw-blue{
+    color: #00858d;
+}
+
+.aw-green{
+    color: #008e3d;
+}
+
+.prj-bio-title{
+    font-weight: bold;
+}
+
+.prj-bio{
+    font-size: 30px;
+}
+
+.main-skills{
     position: relative;
-    right: 150px;
-    float: right;
-    top: -100px;
-    margin-bottom: 100px;
-    border-radius: 20px;
-    border: 10px solid #ffffffcc;
-    box-shadow: 0 0 20px #00000020;
+    background: #f9f9f9;
+    padding: 20px 40px;
+    box-shadow: 0 2px 8px #0000001A;
+    border-top-style: dashed;
+    border-top-color: #00d3df;
+    border-top-width: 3px;
+}
+
+.prj-skills-title{
+    color: #00858d;
+    font-weight: bold;
+}
+
+.main-bid{
+    position: relative;
+    padding: 30px;
+}
+
+.bid-aw{
+    font-size: 20px;
+}
+
+.bid-msg{
+    display: inline;
+    font-size: 20px;
 }
 
 .footer {

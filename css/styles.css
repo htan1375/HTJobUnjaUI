@@ -325,6 +325,51 @@ body{
     padding: 30px;
 }
 
+.prj-bid{
+    display: inline-block;
+}
+
+.bid-title{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.bid-cont{
+    display: inline-block;
+    border: 2px solid #00bfd2;
+    border-radius: 5px;
+    padding: 2px;
+    height: 55px;
+}
+
+.bid-input{
+    display: inline-block;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.bid-unit{
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    color: #00aebf;
+}
+
+.bid-send{
+    display: inline-block;
+    height: 55px;
+    background: #00aebf;
+    color: #ffffff;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 0;
+    padding: 0 15px;
+    margin: 0 15px;
+}
+
 .bid-aw{
     font-size: 20px;
 }

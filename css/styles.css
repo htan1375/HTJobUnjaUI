@@ -93,6 +93,7 @@ body{
 .section-name{
     position: relative;
     float: right;
+    font-weight: bold;
     top: 20px;
     right: 180px;
     color: #464646;
@@ -101,7 +102,7 @@ body{
 .section-job-title{
     position: relative;
     float: right;
-    top: 80px;
+    top: 85px;
     right: -35px;
     font-size: larger;
     color: #666666;
@@ -117,8 +118,45 @@ body{
     color: #464646;
 }
 
+.section-add-skill{
+    position: relative;
+    display: flex;
+    float: right;
+    top: -160px;
+    padding: 0 150px;
+    justify-content: center;
+    align-content: center;
+}
+
+.add-skill-block{
+    padding: 5px;
+    margin: 10px;
+    background: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px #0000001A;
+}
+
+.add-skill-list{
+    height: 40px;
+    border: 2px #ededed;
+    background: #f9f9f9;
+    min-width: 160px;
+    border-radius: 5px;
+    padding: 0 5px 0 5px;
+}
+
+.add-skill-btn{
+    height: 40px;
+    background: #0099a5;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 0;
+    padding: 0 15px;
+}
+
 .section-skills{
-    display: flow;
+    display: flex;
     flex-flow: row;
     top: -100px;
     padding: 0px 150px;
@@ -126,16 +164,7 @@ body{
     float: left;
 }
 
-.section-skills ul{
-    display: flow;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
 .section-skills li{
-    display: flow;
     float: left;
     color: #464646;
     align-content: center;
@@ -149,6 +178,14 @@ body{
     border-radius: 5px;
     box-shadow: 0 2px 8px #0000001A;
     direction: ltr;
+}
+
+.section-skills ul{
+    display: flow;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .section-skills .point{
@@ -173,6 +210,11 @@ body{
     background: #b9eff2;
     color: #006264;
 }
+
+.section-skills .pr{
+     background: #ef001c;
+     color: #ffffff;
+ }
 
 .section-skills {
     position: relative;

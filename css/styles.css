@@ -43,11 +43,18 @@ body{
 
 .mynav{
     background: #b9eff2;
-    height: 160px;
     margin-top: 60px;
 }
 
-.mynav-svg{
+.nav-project{
+    height: 100px;
+}
+
+.nav-profile{
+    height: 160px;
+}
+
+.nav-profile-svg{
     position: absolute;
     right: 200px;
     top: 190px;
@@ -55,18 +62,20 @@ body{
     height: 35px;
 }
 
-.mynav-svg polygon{
+.nav-profile-svg polygon{
     width: 300px;
     height: 35px;
 }
 
-.mynav-svg .svg-dark{
+.nav-profile-svg .svg-dark{
     fill: #6bc9ce;
 }
 
-.mynav-svg .svg-light{
+.nav-profile-svg .svg-light{
     fill: #6bc9ce80;
 }
+
+
 
 .aside{
     position: absolute;
@@ -76,7 +85,8 @@ body{
 .section{
     position: relative;
     background: #f6f6f6;
-    min-height: calc(100vh - 60px - 60px);
+    min-height: calc(100vh - 65px);
+    box-shadow: 0 0 4px #0000001A;
 }
 
 .section-image{
@@ -94,7 +104,7 @@ body{
     position: relative;
     float: right;
     font-weight: bold;
-    top: 20px;
+    top: 10px;
     right: 180px;
     color: #464646;
 }
@@ -115,6 +125,7 @@ body{
     padding: 0px 150px;
     text-align: justify;
     font-size: larger;
+    line-height: 200%;
     color: #464646;
 }
 
@@ -198,7 +209,6 @@ body{
     border-radius: 4px;
     width: 20px;
     height: 20px;
-
 }
 
 .section-skills .pg{
@@ -216,8 +226,25 @@ body{
      color: #ffffff;
  }
 
-.section-skills {
+.main{
     position: relative;
+    background: #ffffff;
+    height: 900px;
+    top: -50px;
+    margin: 0 160px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0000001A;
+}
+
+.main-img{
+    position: relative;
+    right: 150px;
+    float: right;
+    top: -100px;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    border: 10px solid #ffffffcc;
+    box-shadow: 0 0 20px #00000020;
 }
 
 .footer {

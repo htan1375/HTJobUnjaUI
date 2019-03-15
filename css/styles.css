@@ -173,6 +173,14 @@ body{
     float: left;
 }
 
+.skills-list{
+    display: flow;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 .skill-block{
     float: left;
     color: #464646;
@@ -189,14 +197,6 @@ body{
     direction: ltr;
 }
 
-.skills-list{
-    display: flow;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
 .skill-point{
     position: relative;
     padding: 0 8px;
@@ -207,6 +207,11 @@ body{
     border-radius: 4px;
     width: 20px;
     height: 20px;
+}
+
+.skill-title{
+    font-size: 18px;
+    color: #000000;
 }
 
 .pg{
@@ -267,6 +272,12 @@ body{
     display: inline;
     font-weight: bold;
     font-size: 20px;
+    line-height: 200%;
+}
+
+.aw-text-det{
+    display: inline;
+    font-size: 20px;
 }
 
 .aw-red{
@@ -281,12 +292,17 @@ body{
     color: #008e3d;
 }
 
+.aw-grey{
+    color: #666666;
+}
+
 .prj-bio-title{
     font-weight: bold;
 }
 
 .prj-bio{
-    font-size: 30px;
+    font-size: 20px;
+    text-align: justify;
 }
 
 .main-skills{

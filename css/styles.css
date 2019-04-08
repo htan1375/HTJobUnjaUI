@@ -34,6 +34,22 @@ body{
     font-size: 16px;
     line-height: 25px;
     margin: 0 10px 0 10px;
+    -webkit-transition: 500ms;
+    transition: 500ms;
+}
+
+.header_link:hover{
+    text-decoration: none;
+    color: #00bfd2;
+    -webkit-transition: 500ms;
+    transition: 500ms;
+}
+
+.header_link:focus{
+    text-decoration: none;
+    color: #24292d;
+    -webkit-transition: 500ms;
+    transition: 500ms;
 }
 
 .header-left {
@@ -58,6 +74,9 @@ body{
 .nav-register{
     background: #000000;
     min-height: calc(100vh - 60px);
+    transition-delay: 10s;
+    transition: 1s;
+    -webkit-transition: 1s;
 }
 
 .nav-profile-svg{
@@ -93,6 +112,10 @@ body{
     vertical-align: center;
     horiz-align: center;
     z-index: 90;
+}
+
+.nav-register .aside{
+    min-width: 350px;
 }
 
 .reg-title{
@@ -164,6 +187,8 @@ body{
 .slide img{
     position:absolute;
     animation:slide 25s infinite;
+    transition: transform 10s linear;
+    transform: scale(1.1);
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -176,27 +201,33 @@ body{
     }
     40%{
         opacity:0;
+        transform: scale(1);
     }
 }
 
 .slide img:nth-child(5){
-    animation-delay:0s;
+    animation-delay: 0s;
+    transition-delay: 0s;
 }
 
 .slide img:nth-child(4){
-animation-delay:5s;
+    animation-delay: 5s;
+    transition-delay: 5s;
 }
 
 .slide img:nth-child(3){
-    animation-delay:10s;
+    animation-delay: 10s;
+    transition-delay: 10s;
 }
 
 .slide img:nth-child(2){
-    animation-delay:15s;
+    animation-delay: 15s;
+    transition-delay: 15s;
 }
 
 .slide img:nth-child(1){
-    animation-delay:20s;
+    animation-delay: 20s;
+    transition-delay: 20s;
 }
 
 .section{

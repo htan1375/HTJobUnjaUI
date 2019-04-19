@@ -5,6 +5,11 @@
     <link rel="stylesheet" type="text/css" href="fonts/iransans/fonts.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--<script src="js/home.js" type="text/jsx"></script>-->
     <meta charset="UTF-8">
     <title>جاب‌اونجا</title>
 </head>
@@ -21,7 +26,7 @@
         </span>
     </header>
     <nav class="mynav nav-home">
-        <h1 class="home-title">جاب‌اونجا خوب است!</h1>
+        <h1 class="home-title">جاب‌اونجا خوب است !</h1>
         <p class="home-desc">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. </p>
         <span class="home-search-span">
             <input class="home-search-input" type="text" placeholder="جستجو در جاب‌اونجا">
@@ -29,75 +34,109 @@
         </span>
     </nav>
     <section class="home-section">
-        <ul class="home-main-right">
-            <li class="home-user-search">
-                <input class="home-user-search-input" type="text" placeholder="جستجو نام کاربر">
-            </li>
-            <li class="home-user">
-                <img class="home-user-img" src="img/khar.jpg" alt="profile" width="45px" height="45px"/>
-                <h3 class="home-user-name">صادق حائری</h3>
-                <p class="home-user-job">گیک</p>
-            </li>
-            <li class="home-user">
-                <img class="home-user-img" src="img/jooj.jpg" alt="profile" width="45px" height="45px"/>
-                <h3 class="home-user-name">محمدرضا کیانی</h3>
-                <p class="home-user-job">چیف تی‌ای</p>
-            </li>
-            <li class="home-user">
-                <img class="home-user-img" src="img/abtin.jpg" alt="profile" width="45px" height="45px"/>
-                <h3 class="home-user-name">آبتین باطنی</h3>
-                <p class="home-user-job">توسعه‌دهنده‌ی فرانت‌اند</p>
-            </li>
-            <li class="home-user">
-                <img class="home-user-img" src="img/vmoh.jpg" alt="profile" width="45px" height="45px"/>
-                <h3 class="home-user-name">کاربر ناشناس</h3>
-                <p class="home-user-job">دانشجو</p>
-            </li>
+        <ul class="home-main-right" id="users">
+
         </ul>
-        <ul class="home-main-left">
-            <li class="home-proj">
-                <img class="home-prj-img" src="img/dokhtar.jpg" alt="profile" width="160px" height="160px"/>
-                <h1 class="home-prj-name">وبسایت فروشگاهی مشابه دیجی کالا</h1>
-                <p class="home-prj-timeleft">زمان باقی مانده: ۱۷:۲۵</p></br>
-                <p class="home-prj-bio">بک فروشگاه اینترنتی با قابلیت مدیریت حرفه ای سبد خرید حرفه ای مقایسه محصولات ارسال پیامک و ایمیل گزارش گیری جامع قالب...</p>
-                <p class="home-prj-price">بودجه: ۲۵۰۰ تومان</p></br>
-                <ul class="home-skill-list">
-                    <li class="home-skill-title">مهارت‌ها:</li>
-                    <li class="home-skill">HTML</li>
-                    <li class="home-skill">CSS</li>
-                    <li class="home-skill">JavaScript</li>
-                    <li class="home-skill">TypeScript</li>
-                </ul>
-            </li>
-            <li class="home-proj">
-                <img class="home-prj-img" src="img/dokhtar.jpg" alt="profile" width="160px" height="160px"/>
-                <h1 class="home-prj-name">وبسایت فروشگاهی مشابه دیجی کالا</h1>
-                <p class="home-prj-timeleft">زمان باقی مانده: ۱۷:۲۵</p></br>
-                <p class="home-prj-bio">بک فروشگاه اینترنتی با قابلیت مدیریت حرفه ای سبد خرید حرفه ای مقایسه محصولات ارسال پیامک و ایمیل گزارش گیری جامع قالب...</p>
-                <p class="home-prj-price">بودجه: ۲۵۰۰ تومان</p></br>
-                <ul class="home-skill-list">
-                    <li class="home-skill-title">مهارت‌ها:</li>
-                    <li class="home-skill">HTML</li>
-                    <li class="home-skill">CSS</li>
-                    <li class="home-skill">JavaScript</li>
-                    <li class="home-skill">TypeScript</li>
-                </ul>
-            </li>
-            <li class="home-proj">
-                <img class="home-prj-img" src="img/dokhtar.jpg" alt="profile" width="160px" height="160px"/>
-                <h1 class="home-prj-name">وبسایت فروشگاهی مشابه دیجی کالا</h1>
-                <p class="home-prj-timeout">مهلت تمام شده</p></br>
-                <p class="home-prj-bio">بک فروشگاه اینترنتی با قابلیت مدیریت حرفه ای سبد خرید حرفه ای مقایسه محصولات ارسال پیامک و ایمیل گزارش گیری جامع قالب...</p>
-                <p class="home-prj-price">بودجه: ۲۵۰۰ تومان</p></br>
-                <ul class="home-skill-list">
-                    <li class="home-skill-title">مهارت‌ها:</li>
-                    <li class="home-skill">HTML</li>
-                    <li class="home-skill">CSS</li>
-                    <li class="home-skill">JavaScript</li>
-                    <li class="home-skill">TypeScript</li>
-                </ul>
-            </li>
+        <script type="text/jsx">
+            class Users extends React.Component {
+                constructor(){
+                    super();
+                    this.state = {
+                        persons: []
+                    };
+                }
+                componentDidMount(){
+                    axios.get('http://localhost:2424/user')
+                        .then((response) => {
+                            console.log(response.data);
+                            this.setState({
+                                persons:response.data
+                            });
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        })
+                        .then(function () {});
+                }
+                render() {
+                    return <div>
+                        <li className="home-user-search">
+                            <input className="home-user-search-input" type="text" placeholder="جستجوی نام کاربر"/>
+                        </li>
+                        {
+                            this.state.persons.map((person) => {
+                                return(
+                                    <li className="home-user"><a href={"./profile?id="+person['id']}>
+                                        <img className="home-user-img" src={person['profilePictureURL']} alt="profile" width="45px" height="45px"/>
+                                        <h3 className="home-user-name">{person['fullName']}</h3>
+                                        <p className="home-user-job">{person['jobTitle']}</p>
+                                    </a></li>
+                                )
+                            })
+                        }
+                    </div>
+                }
+            }
+            ReactDOM.render(
+                <Users />,
+                document.getElementById("users")
+            );
+        </script>
+        <ul class="home-main-left" id="projects">
         </ul>
+        <script type="text/jsx">
+            class Projects extends React.Component {
+                constructor(){
+                    super();
+                    this.state = {
+                        projs: []
+                    };
+                }
+                componentDidMount(){
+                    axios.get('http://localhost:2424/project')
+                        .then((response) => {
+                            console.log(response.data);
+                            this.setState({
+                                projs:response.data
+                            });
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        })
+                        .then(function () {});
+                }
+                render() {
+                    return(
+                        <div>{
+                            this.state.projs.map((proj) => {
+                                return (
+                                    <li className="home-proj"><a href={"./project?id="+proj['id']}>
+                                        <img className="home-prj-img" src={proj['imageUrl']} alt="profile" width="160px" height="160px"/>
+                                        <h1 className="home-prj-name">{proj['title']}</h1>
+                                        <p className="home-prj-timeout">مهلت تمام شده</p>
+                                        <p className="home-prj-bio">{proj['description']}</p>
+                                        <p className="home-prj-price">بودجه: {""+proj['budget']} تومان</p>
+                                        <li className="home-skill-title">مهارت‌ها:</li>
+                                        <ul className="home-skill-list">{
+                                            proj['skills'].map((skill) => {
+                                                return(
+                                                    <li className="home-skill">{skill['name']}</li>
+                                                )
+                                            })
+                                        }
+                                        </ul>
+                                    </a></li>
+                                )
+                            })
+                        }</div>
+                    )
+                }
+            }
+            ReactDOM.render(
+                <Projects />,
+                document.getElementById("projects")
+            );
+        </script>
     </section>
 
     <footer class="footer">

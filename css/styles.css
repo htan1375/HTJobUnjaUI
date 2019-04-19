@@ -5,6 +5,11 @@
     direction: rtl;
 }
 
+a:hover{
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+
 body{
     margin: 0 0 0 0;
 }
@@ -147,11 +152,11 @@ body{
 }
 
 .home-proj{
-    height: 200px;
+    height: auto;
     background: #ffffff;
     border-radius: 5px;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 30px 0;
     box-shadow: 0 5px 8px #0000001A;
     transition-duration: 200ms;
 }
@@ -164,7 +169,8 @@ body{
 
 .home-prj-img{
     position: relative;
-    margin: 10px;
+    top: -10px;
+    right: 20px;
     border: 2px solid #f3f3f3;
     border-radius: 5px;
 }
@@ -172,17 +178,19 @@ body{
 .home-prj-name{
     position: relative;
     font-size: 20px;
-    right: 200px;
-    top: -190px;
+    right: 180px;
+    top: -200px;
     color: #24292d;
     font-weight: bold;
+    max-width: 55%;
+    padding: 20px;
 }
 
 .home-prj-bio{
     position: relative;
     font-size: 14px;
     right: 200px;
-    top: -20px;
+    top: 0;
     color: #464646;
     width: calc(100% - 200px);
 }
@@ -192,6 +200,7 @@ body{
     font-size: 16px;
     right: 200px;
     top: 0;
+    width: max-content;
     color: #00858d;
     font-weight: bold;
 }
@@ -200,17 +209,18 @@ body{
     display: flow;
     position: relative;
     right: 200px;
-    top: -25px;
+    top: 0;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 .home-skill-title{
     position: relative;
     width: max-content;
     color: #989898;
+    right: 200px;
+    top: 0;
 }
 
 .home-skill{
@@ -227,12 +237,13 @@ body{
     margin: 5px;
     border: 1px solid #ededed;
     border-radius: 3px;
+    direction: ltr;
 }
 
 .home-prj-timeleft{
     position: relative;
-    margin-top: -220px;
-    margin-right: calc(100% - 150px);
+    margin-top: -255px;
+    margin-right: calc(100% - 160px);
     color: #565656;
     background: #f5f5f5;
     border-radius: 5px;
@@ -243,8 +254,8 @@ body{
 
 .home-prj-timeout{
     position: relative;
-    margin-top: -220px;
-    margin-right: calc(100% - 110px);
+    margin-top: -255px;
+    margin-right: calc(100% - 120px);
     color: #fcfcfc;
     background: #3d8788;
     border-radius: 5px;

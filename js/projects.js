@@ -18,6 +18,7 @@ class Projects extends React.Component {
             })
             .then(function () {});
     }
+
     render() {
         return(
             <div>{
@@ -26,7 +27,19 @@ class Projects extends React.Component {
                         <li className="home-proj"><a href={"./project?id="+proj['id']}>
                             <img className="home-prj-img" src={proj['imageUrl']} alt="profile" width="160px" height="160px"/>
                             <h1 className="home-prj-name">{proj['title']}</h1>
-                            <p className="home-prj-timeout">مهلت تمام شده</p>
+                            {(proj['deadline'] > (Date.now()-(3*3600*1000)))?
+                                (
+                                    <p className="home-prj-timeleft">
+                                        {"زمان باقی مانده: "
+                                        + Math.floor((proj['deadline']-Date.now())/3600000)
+                                        + ":"
+                                        + Math.floor(((proj['deadline']-Date.now())%3600000)/60000)
+                                        }
+                                        </p>
+                                ):(
+                                    <p className="home-prj-timeout">مهلت تمام شده</p>
+                                )
+                            }
                             <p className="home-prj-bio">{proj['description']}</p>
                             <p className="home-prj-price">بودجه: {""+proj['budget']} تومان</p>
                             <li className="home-skill-title">مهارت‌ها:</li>

@@ -532,7 +532,7 @@ body{
     position: relative;
     float: right;
     top: 85px;
-    right: -35px;
+    right: 30px;
     font-size: larger;
     color: #666666;
 }
@@ -541,6 +541,7 @@ body{
     position: relative;
     float: right;
     top: -160px;
+    width: 100%;
     padding: 0 150px;
     text-align: justify;
     font-size: larger;
@@ -637,16 +638,8 @@ body{
 }
 
 .pg{
-    background: #b9eff2;
-    color: #006264;
-    transition-duration: 200ms;
-}
-
-.pg:hover{
     background: #00b800;
     color: #ffffff;
-    cursor: pointer;
-    transition-duration: 200ms;
 }
 
 .pb{
@@ -658,6 +651,19 @@ body{
      background: #ef001c;
      color: #ffffff;
  }
+
+.pc{
+    background: #b9eff2;
+    color: #006264;
+    transition-duration: 200ms;
+}
+
+.pc:hover{
+    background: #00b800;
+    color: #ffffff;
+    cursor: pointer;
+    transition-duration: 200ms;
+}
 
 .main{
     position: relative;

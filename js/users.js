@@ -26,7 +26,7 @@ class Users extends React.Component {
             {
                 this.state.persons.map((person) => {
                     return(
-                        <li className="home-user"><a href={"./profile?id="+person['id']}>
+                        <li className="home-user"><a href={"./profile.html?id="+person['id']}>
                             <img className="home-user-img" src={person['profilePictureURL']} alt="profile" width="45px" height="45px"/>
                             <h3 className="home-user-name">{person['fullName']}</h3>
                             <p className="home-user-job">{person['jobTitle']}</p>

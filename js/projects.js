@@ -24,10 +24,10 @@ class Projects extends React.Component {
             <div>{
                 this.state.projs.map((proj) => {
                     return (
-                        <li className="home-proj"><a href={"./project?id="+proj['id']}>
+                        <li className="home-proj"><a href={"./project.html?id="+proj['id']}>
                             <img className="home-prj-img" src={proj['imageUrl']} alt="profile" width="160px" height="160px"/>
                             <h1 className="home-prj-name">{proj['title']}</h1>
-                            {(proj['deadline'] > (Date.now()-(3*3600*1000)))?
+                            {(proj['deadline'] > Date.now())?
                                 (
                                     <p className="home-prj-timeleft">
                                         {"زمان باقی مانده: "

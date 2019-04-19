@@ -2,6 +2,7 @@
   "name": "HTJobUnjaUI",
   "version": "1.0.0",
   "dependencies": {
-    "axios": "latest"
+    "axios": "latest",
+    "react-router-dom": "^5.0.0"
   }
 }

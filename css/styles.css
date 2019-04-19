@@ -633,24 +633,25 @@ body{
 .skill-title{
     font-size: 18px;
     color: #000000;
+    margin-right: 5px;
 }
 
 .pg{
-    background: #00b800;
-    color: #ffffff;
-}
-
-.pb{
     background: #b9eff2;
     color: #006264;
     transition-duration: 200ms;
 }
 
-.pb:hover{
+.pg:hover{
     background: #00b800;
     color: #ffffff;
     cursor: pointer;
     transition-duration: 200ms;
+}
+
+.pb{
+    background: #b9eff2;
+    color: #006264;
 }
 
 .pr{

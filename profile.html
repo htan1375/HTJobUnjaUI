@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <!-- MY CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+    <!-- FONTS AND BOOTSTRAP -->
+    <link rel="stylesheet" type="text/css" href="fonts/iransans/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- REACT LIBRARIES -->
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- MY REACT CLASSES -->
+    <script src="js/profile.js" type="text/jsx"></script>
+
+    <meta charset="UTF-8">
+    <title>جاب‌اونجا</title>
+</head>
+<body>
+    <header class="header">
+        <span class="header-span">
+            <a class="header-logo" href="#">
+                <img src="logo/logo%20v1.png" alt="JobUnja" width="auto" height="60px"/>
+            </a>
+            <div class="header-left">
+                <a class="header_link" href="#">حساب کاربری</a>
+                <a class="header_link" href="#">خروج</a>
+            </div>
+        </span>
+    </header>
+    <nav class="mynav nav-profile">
+        <svg class="nav-profile-svg">
+            <polygon class="svg-light" points="0,35 300,35 300,0 25,0"/>
+            <polygon class="svg-dark" points="10,35 300,35 300,0 35,0"/>
+        </svg>
+    </nav>
+    <section class="section" id="profile">
+    </section>
+    <script type="text/jsx">
+        ReactDOM.render(
+            <Profile />,
+            document.getElementById("profile")
+        );
+    </script>
+    <footer class="footer">
+        <p>&copy; تمامی حقوق این سایت متعلق به جاب‌اونجا می‌باشد</p>
+    </footer>
+</body>
+</html>

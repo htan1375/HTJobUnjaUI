@@ -16,36 +16,34 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <!-- MY REACT CLASSES -->
+    <script src="js/header.js" type="text/jsx"></script>
     <script src="js/project.js" type="text/jsx"></script>
 
     <meta charset="UTF-8">
     <title>جاب‌اونجا</title>
 </head>
 <body>
-<header class="header">
-        <span class="header-span">
-            <a class="header-logo" href="./home.html">
-                <img src="logo/logo%20v1.png" alt="JobUnja" width="auto" height="60px"/>
-            </a>
-            <div class="header-left">
-                <a class="header_link" href="./profile.html?id=me">حساب کاربری</a>
-                <a class="header_link" href="#">خروج</a>
-            </div>
-        </span>
-</header>
-<nav class="mynav nav-project">
-</nav>
-<section class="section" id="project">
-</section>
-<script type="text/jsx">
-    ReactDOM.render(
-        <Project />,
-        document.getElementById("project")
-    );
-</script>
+    <header class="header" id="header">
+    </header>
+    <script type="text/jsx">
+        ReactDOM.render(
+            <Header />,
+            document.getElementById("header")
+        );
+    </script>
+    <nav class="mynav nav-project">
+    </nav>
+    <section class="section" id="project">
+    </section>
+    <script type="text/jsx">
+        ReactDOM.render(
+            <Project />,
+            document.getElementById("project")
+        );
+    </script>
 
-<footer class="footer">
-    <p>&copy; تمامی حقوق این سایت متعلق به جاب‌اونجا می‌باشد</p>
-</footer>
+    <footer class="footer">
+        <p>&copy; تمامی حقوق این سایت متعلق به جاب‌اونجا می‌باشد</p>
+    </footer>
 </body>
 </html>

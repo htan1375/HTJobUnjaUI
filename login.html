@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
+    <!-- MY CSS -->
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+    <!-- FONTS AND BOOTSTRAP -->
     <link rel="stylesheet" type="text/css" href="fonts/iransans/fonts.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- REACT LIBRARIES -->
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- MY REACT CLASSES -->
+    <script src="js/login.js" type="text/jsx"></script>
+
     <meta charset="UTF-8">
     <title>جاب اونجا</title>
 </head>
+
 <body>
 <header class="header">
         <span class="header-span">
@@ -15,24 +29,22 @@
                 <img src="logo/logo%20v1.png" alt="JobUnja" width="auto" height="60px"/>
             </a>
             <div class="header-left">
-                <a class="header_link" href="#">حساب کاربری</a>
+                <a class="header_link" href="./profile.html?id=me">حساب کاربری</a>
                 <a class="header_link" href="#">خروج</a>
             </div>
         </span>
 </header>
+
 <nav class="mynav nav-register">
-    <aside class="aside">
-        <h3 class="reg-title">ورود به جاب‌اونجا</h3>
-        <form action="#">
-            <input class="reg-field" type="text" name="username" placeholder="نام کاربری">
-            <input class="reg-field" type="password" name="password" placeholder="رمز ورود">
-            <input class="reg-submit" type="submit" value="ورود">
-        </form>
-        <span class="reg-already">
-            <p class="reg-already-text">عضو جاب‌اونجا نیستید؟</p>
-            <a href="./register.html"><p class="reg-already-link">ثبت نام کنید</p></a>
-        </span>
-    </aside>
+    <script type="text/jsx">
+        ReactDOM.render(
+            <Login />,
+            document.getElementById("login")
+        );
+    </script>
+    <div id="login">
+
+    </div>
     <aside class="slide">
         <img src="img/job-5.jpg" alt="Slide 5" />
         <img src="img/job-4.jpg" alt="Slide 4" />

@@ -6,7 +6,13 @@ class Projects extends React.Component {
         };
     }
     componentDidMount(){
-        axios.get('http://localhost:2424/project')
+        axios.get('http://localhost:2424/project',{
+            headers:{
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem("token")
+            }
+        })
+
             .then((response) => {
                 console.log(response.data);
                 this.setState({
@@ -15,6 +21,7 @@ class Projects extends React.Component {
             })
             .catch(function (error) {
                 console.log(error);
+                window.location.href = './login.html';
             })
             .then(function () {});
     }

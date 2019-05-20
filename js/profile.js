@@ -6,7 +6,8 @@ class Profile extends React.Component {
             user: {
                 skills: []
             },
-            selSkill: ""
+            selSkill: "",
+            isMy : false
         };
     }
 
@@ -16,7 +17,13 @@ class Profile extends React.Component {
         if (urlpar.split('=')[0] === "id"){
             id = urlpar.split('=')[1];
         }
-        axios.get('http://localhost:2424/user/' + id)
+        if (id === "me") this.state.isMy = true;
+        axios.get('http://localhost:2424/user/'+id ,{
+            headers:{
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem("token")
+            }
+        })
             .then((response) => {
                 console.log(response.data);
                 this.setState({
@@ -25,10 +32,16 @@ class Profile extends React.Component {
             })
             .catch(function (error) {
                 console.log(error);
+                window.location.href = './login.html';
             })
             .then(function () {});
 
-        axios.get('http://localhost:2424/skills')
+        axios.get('http://localhost:2424/skills' ,{
+            headers:{
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem("token")
+            }
+        })
             .then((response) => {
                 console.log(response.data);
                 this.setState({
@@ -37,6 +50,7 @@ class Profile extends React.Component {
             })
             .catch(function (error) {
                 console.log(error);
+                window.location.href = './login.html';
             })
             .then(function () {});
     }
@@ -47,7 +61,11 @@ class Profile extends React.Component {
 
     addSkill = event => {
         event.preventDefault();
-        axios.post('http://localhost:2424/addSkill?userId='+this.state.user['id']+'&skill='+this.state.selSkill+'&point=10')
+        axios.post('http://localhost:2424/addSkill?userId='+this.state.user['id']+'&skill='+this.state.selSkill+'&point=1',{},{
+            headers:{
+                'Authorization': localStorage.getItem("token")
+            }
+        })
             .then(res => {
                 console.log(res);
                 console.log(res.data);
@@ -57,7 +75,11 @@ class Profile extends React.Component {
 
     endorseSkill = event => {
         event.preventDefault();
-        axios.post('http://localhost:2424/endorseSkill?userId='+this.state.user['id']+'&skill='+event.target.accessKey)
+        axios.post('http://localhost:2424/endorseSkill?userId='+this.state.user['id']+'&skill='+event.target.accessKey,{},{
+            headers:{
+                'Authorization': localStorage.getItem("token")
+            }
+        })
             .then(res => {
                 console.log(res);
                 console.log(res.data);
@@ -74,7 +96,7 @@ class Profile extends React.Component {
                 <p className="section-bio">{this.state.user['bio']}</p>
                 <span className="section-add-skill">
                     <h3>مهارت‌ها:</h3>
-                        {(this.state.user['isLoggedIn']) &&
+                        {(this.state.isMy) &&
                             <form className="add-skill-block" onSubmit={this.addSkill}>
                                 <select className="add-skill-list" name="skill" onChange={this.handleChange}>
                                     <option value="select">--انتخاب مهارت--</option>
@@ -92,7 +114,7 @@ class Profile extends React.Component {
                 </span>
                 <div className="section-skills">
                     <ul className="skills-list">
-                        {(this.state.user['isLoggedIn']) &&
+                        {(this.state.isMy) &&
                             this.state.user['skills'].map((skill) => {
                                 return (
                                     (skill['endorse']) ? (
@@ -109,7 +131,7 @@ class Profile extends React.Component {
                                 )
                             })
                         }
-                        {(!this.state.user['isLoggedIn']) &&
+                        {(!this.state.isMy) &&
                             this.state.user['skills'].map((skill) => {
                                 return(
                                     (skill['endorse']) ? (

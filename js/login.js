@@ -15,6 +15,7 @@ class Login extends React.Component {
         axios.post('http://localhost:2424/login',body)
             .then(res => {
                 console.log(res);
+                localStorage.setItem("token", res.data.token);
                 window.location.href = './home.html';
             });
     };

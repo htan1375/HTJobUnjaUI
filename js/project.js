@@ -16,7 +16,12 @@ class Project extends React.Component {
         if (urlpar.split('=')[0] === "id"){
             id = urlpar.split('=')[1];
         }
-        axios.get('http://localhost:2424/project/' + id)
+        axios.get('http://localhost:2424/project/'+id ,{
+            headers:{
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem("token")
+            }
+        })
             .then((response) => {
                 console.log(response.data);
                 this.setState({
@@ -25,10 +30,16 @@ class Project extends React.Component {
             })
             .catch(function (error) {
                 console.log(error);
+                window.location.href = './login.html';
             })
             .then(function () {});
 
-        axios.get('http://localhost:2424/bid/' + id)
+        axios.get('http://localhost:2424/bid/'+id ,{
+            headers:{
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem("token")
+            }
+        })
             .then((response) => {
                 console.log(response.data);
                 if (response.data === ""){
@@ -44,6 +55,7 @@ class Project extends React.Component {
             })
             .catch(function (error) {
                 console.log(error);
+                window.location.href = './login.html';
             })
             .then(function () {});
     }
@@ -54,7 +66,12 @@ class Project extends React.Component {
 
     submitBid = event => {
         event.preventDefault();
-        axios.post('http://localhost:2424/submitBid?projectId='+this.state.proj['id']+'&bidAmount='+this.state.bidVal)
+        axios.post('http://localhost:2424/submitBid?projectId='+this.state.proj['id']+'&bidAmount='+this.state.bidVal ,{},{
+            headers:{
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem("token")
+            }
+        })
             .then(res => {
                 console.log(res);
                 console.log(res.data);

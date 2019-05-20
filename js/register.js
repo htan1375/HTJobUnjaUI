@@ -21,7 +21,7 @@ class Register extends React.Component {
         axios.post('http://localhost:2424/register',body)
             .then(res => {
                 console.log(res);
-                window.location.href = './home.html';
+                window.location.href = './login.html';
             });
     };
 
